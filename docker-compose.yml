@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  squid-proxy:
+    build: .
+    ports:
+      - "3128:3128"
+      - "3129:3129"
+    environment:
+      - PROXY_PASSWORD=your_secure_password_123
+    restart: unless-stopped
